@@ -16,7 +16,7 @@
         <header>
             <div id="menu">
                 <ul>
-                    <li id="logo"><a href="#"><img src="img/u bos.png" alt=""></a></li>
+                    
                     <li><a href="#">Home</a></li>
                     
             
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="image">
-                    <img src="img/phone.jpg" width="250" />
+                    <img src="img/phone.jpg" width="150" />
                 </div>
             </main>
         </header>
@@ -55,6 +55,7 @@
         </div>
 
             <div class="layout layout-right">
+                <h2>Pets registration</h2>
                 Microchip: <input id="microchip" style="margin:5px" type="text"><br><br>
                 Species:<input id="species" style="margin:5px" type="text"><br><br>
                 <label for="sex-select">Sex:</label>
@@ -70,12 +71,21 @@
                     <option value="Medium">Medium</option>
                     <option value="small">Small</option>       
                 </select><br><br>
-                Potent Dangerous: <input id="PotentDangerous" style="margin:5px" type="text"><br><br>
+                <label for="PotentDangerous-select">Potent Dangerous:</label>
+                <select name="pets" id="PotentDangerous">
+                    <option value="">--Please choose an option--</option>
+                    <option value="yes">YES</option>
+                    <option value="No">NO</option>    
+                </select><br><br>
                 Neighborhood: <input id="Neighborhood" style="margin:5px" type="text"><br><br>
-            
-                <button id="btn_guardar" onclick="guardar()">Guardar</button><br><br>
-        
-                <table >
+                <button id="btn_guardar" onclick="guardar()">Save</button><br><br>
+
+            </div>
+            <div class="container">
+                <div class="container">
+                    <button id="boton"> Load Data</button>
+                    <input type="text" id="myInput" onkeyup="filtrar()" placeholder="Search for names..">    
+                <table class="table table-dark">
                     <thead>
                         <tr>
                             <th> Microchip </th>
@@ -86,41 +96,13 @@
                             <th> Neighborhood </th>
                         </tr>
                     </thead>
-                    <tbody id="tabla">
+                    <tbody id="BTN">
                     </tbody>
                 </table>
+                </div>
             </div>
-        
-            <div id="datosPersona">
-                <button type="button" onclick="cargarDatos()">
-                Load Data               
-                </button>
-            
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th> Microchip </th>
-                                <th> Species </th>
-                                <th> Sex </th>
-                                <th> Size </th>
-                                <th> Potent Dangerous </th>
-                                <th> Neighborhood </th>
-                            </tr>
-                        </thead>
-                    <tbody id="res">
-
-                    </tbody>
-
-
-                </table>
-            
-            </div>
-        </div>
-    
-    
-
         <footer>
-            Juan Pablo Romero © Derechos Reservados
+            Juan Pablo Romero Amado
         </footer>
     </div>
 </body>
